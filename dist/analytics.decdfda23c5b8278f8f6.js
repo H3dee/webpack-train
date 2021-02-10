@@ -8,8 +8,8 @@
  */
 /******/ (() => { // webpackBootstrap
 /*!**********************!*\
-  !*** ./src/index.js ***!
+  !*** ./analytics.js ***!
   \**********************/
-eval("const post = new Post()\r\n\r\nconsole.log('Post: ', post.toString())\n\n//# sourceURL=webpack://webpack-train/./src/index.js?");
+eval("const connectAnalytics = () => {\r\n  let counter = 0\r\n  let isDestroy = false\r\n\r\n  const clickHandler = () => counter++\r\n\r\n  document.addEventListener('click', clickHandler)\r\n\r\n  return {\r\n    getClicks() {\r\n      if (isDestroy) return `Analytics is destroyed. Total clicks: ${counter}`\r\n      return counter\r\n    },\r\n    destroy() {\r\n      document.removeEventListener('click', clickHandler)\r\n      isDestroy = true\r\n    },\r\n  }\r\n}\r\n\r\nwindow.analytics = connectAnalytics()\r\n\n\n//# sourceURL=webpack:///./analytics.js?");
 /******/ })()
 ;

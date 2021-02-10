@@ -8,7 +8,7 @@ const connectAnalytics = () => {
 
   return {
     getClicks() {
-      if (isDestroy) return 'Analytics is destroyed'
+      if (isDestroy) return `Analytics is destroyed. Total clicks: ${counter}`
       return counter
     },
     destroy() {
