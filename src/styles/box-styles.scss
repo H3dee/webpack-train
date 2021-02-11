@@ -1,0 +1,11 @@
+.sass-styled-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    padding: 25px 0;
+    p {
+        text-transform: uppercase;
+        color: #fff;
+    }
+}

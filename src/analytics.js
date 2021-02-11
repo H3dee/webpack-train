@@ -1,10 +1,12 @@
+import * as $ from 'jquery'
+
 const connectAnalytics = () => {
   let counter = 0
   let isDestroy = false
 
   const clickHandler = () => counter++
 
-  document.addEventListener('click', clickHandler)
+  $(document).on('click', clickHandler)
 
   return {
     getClicks() {
@@ -12,7 +14,7 @@ const connectAnalytics = () => {
       return counter
     },
     destroy() {
-      document.removeEventListener('click', clickHandler)
+      $(document).off('click', clickHandler)
       isDestroy = true
     },
   }

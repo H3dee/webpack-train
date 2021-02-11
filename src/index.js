@@ -1,9 +1,11 @@
 import {Post} from './post'
-import jsonFile from '@assets/file.json'
-import csvFile from '@assets/addresses.csv'
-import xmlFile from '@assets/data.xml'
-import webpackLogo from '@assets/icon-square-big.png'
-import './styles/style.css'
+import * as $ from 'jquery'
+import jsonFile from '@assets/file'
+import csvFile from '@assets/addresses'
+import xmlFile from '@assets/data'
+import webpackLogo from '@assets/icon-square-big'
+import './styles/box-styles'
+import './styles/style'
 
 const post = new Post('Webpack', webpackLogo)
 
@@ -11,3 +13,5 @@ console.log('Post: ', post.toString())
 console.log('Parced json - file: ', jsonFile)
 console.log('Parced csv file: ', csvFile)
 console.log('Parced xml file: ', xmlFile)
+
+$('pre').addClass('code').html(post.toString())

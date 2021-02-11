@@ -6,11 +6,15 @@ export class Post {
   }
 
   toString() {
-    return JSON.stringify({
-      title: this.title,
-      image: this.image,
-      date: this.date.toJSON(),
-    })
+    return JSON.stringify(
+      {
+        title: this.title,
+        image: this.image,
+        date: this.date.toJSON(),
+      },
+      null,
+      3
+    )
   }
 
   ping() {

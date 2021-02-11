@@ -1,7 +1,7 @@
 @import './font-styles.css';
 
-body{
-      font-family: 'Roboto', sans-serif;
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 .app__container {
@@ -19,4 +19,8 @@ body{
   height: 300px;
   margin: 0 auto;
   background: url('../assets/icon-square-big.png') 0 0 / contain no-repeat;
+}
+
+.app__container .code {
+  color: rgb(209, 40, 74);
 }
